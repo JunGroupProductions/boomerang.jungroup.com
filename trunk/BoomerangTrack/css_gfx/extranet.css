@@ -1,0 +1,150 @@
+/* begin HTML tag styles */
+
+body
+{
+	background:#fff;
+	margin:0px;
+	font-family: arial,verdana,helvetica,sans-serif;
+	font-size: 12px;
+	color: #2E2E2E;
+	text-align: center;
+}
+
+a
+{
+	background:transparent;
+  	text-decoration:none;
+  	color:#0056AC;
+}
+
+a:hover
+{
+  	color:#F07F09;
+}
+
+/* end HTML tag styles */
+
+/* begin class styles */
+
+.headerImage
+{
+	margin-bottom:20px;
+	float:left;
+}
+
+.sub
+{ 
+	font-size: 11px;
+}
+
+.small
+{ 
+	font-size: 9px;
+}
+	
+/* end class styles */
+
+/* begin id structure/styles */	
+
+#container 
+{
+	width:760px;
+	float:left;
+}
+
+#content 
+{
+	padding:30px;
+	text-align:left;
+}
+
+#clientTitleModule
+{
+	margin-bottom:24px;
+}
+
+#clientTitleModule #clientTitle
+{
+	float:left;
+	font-size:18px;
+	font-weight:bold;
+	color:#9E9E9E;
+}
+
+#clientTitleModule #clientTitle a
+{
+	font-size:14px;
+	font-weight:normal;
+}
+
+#clientTitleModule #clientTitle a.onPage
+{
+	font-weight:bold;
+}
+
+#clientTitleModule #backNav
+{
+	text-align:right;
+	font-size:11px;
+}
+
+#asset
+{
+	margin-bottom:20px;
+}
+
+#assetTitleModule
+{ 
+	padding-top: 2px;
+	padding-bottom: 2px;
+	border-bottom: 1px solid #C9C9C9;
+	border-top: 1px solid #C9C9C9;
+	margin-bottom: 8px;
+}
+
+#assetTitleModule #assetTitle
+{ 
+	float:left;
+	font-size:13px;
+	color: #C74200;
+	margin-left:7px;
+}
+
+#assetTitleModule #assetDate
+{
+	text-align:right;
+	color:#2E2E2E;
+	margin-right:7px;
+}
+
+#assetItem
+{ 
+	margin-left:14px;
+	color: #2E2E2E;
+	margin-bottom:8px;
+}
+
+table.gridtable {
+	font-family: verdana,arial,sans-serif;
+	font-size:11px;
+	color:#333333;
+	border-width: 1px;
+	border-color: #666666;
+	border-collapse: collapse;
+}
+table.gridtable th {
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #666666;
+	background-color: #dedede;
+}
+table.gridtable td {
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #666666;
+	background-color: #ffffff;
+}
+
+/* end id structure/styles */
