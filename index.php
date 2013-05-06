@@ -12,16 +12,7 @@
 //-->
 </script>
 
-<?php
-
-if($_SERVER['SERVER_NAME'] == "pubtrack.jungroup.com") {
-	echo "<center><img src=\"jun_logo.jpg\"><br></center>";
-	}
-elseif($_SERVER['SERVER_NAME'] == "reporting.hyprmx.com") {
-	echo "<center><img src=\"http://i.imgur.com/HVuWk.png\"><br></center>";
-	}
-
-?>
+<center><img src="jun_logo.jpg"><br></center>
 
 <style type="text/css" media="all">@import "css_gfx/extranet.css";</style>
 
@@ -47,19 +38,19 @@ if (!isset($_SERVER['PHP_AUTH_USER']))
     $_SERVER['PHP_AUTH_USER'] = 0;
 }
 
-$publisher_name = $_SERVER['PHP_AUTH_USER'];
+$partner_name = $_SERVER['PHP_AUTH_USER'];
 
 #### Get the video names and video ids from the database by looking up the campaign 
 
 # What is the name of the campaign we're running? This appears as the heading.
-$name_of_campaign = 'Payout Tracker';
+$name_of_campaign = 'Web Session Tracker';
 
 # Show the name of the ad network on the right of the pane.
-$watermark = $publisher_name;
+$watermark = $partner_name;
 
 echo "<div id='clientTitleModule'>";
 
-echo "<div id='clientTitle'>:: Client Extranet :: [ Payout Tracker v2 ] </a></div>";
+echo "<div id='clientTitle'>:: Client Extranet :: [ Web Session Tracker ] </a></div>";
 echo "<div id='backNav'>&nbsp;</div><br /><br>";
 
 # Use CSS to show the nice top banner and such for the design.
@@ -75,11 +66,6 @@ echo "<div id='backNav'>&nbsp;</div><br /><br>";
 # Instead of having the MYSQL below, we're going to pull in the required PHP file based on the user you are.
 # If you are an admin user, we'll pull in admin.php. If you're a regular publisher user, we'll pull in publisher.php
 
-if($publisher_name != "admin") {
-	require 'publisher.php';
-	}
-else {
-	require 'admin.php';
-	}
+require 'partner.php';
 	
 ?>
