@@ -326,19 +326,6 @@ var listenerOn;
 var newX = 0;
 
 
-if (touchDevice)
-{
-  $('#clientsInnerContainer, #publishersInnerContainer, #biosInnerContainer, #pressInnerContainer')
-    .bind('touchstart', touch_start)
-    .bind('touchmove', touch_move)
-    .bind('touchend', touch_end)
-    .bind('touchcancel', touch_cancel);
-}
-
-
-
-
-
 
 function forwardClick(whichSection) {
 	if (whichSection == 'clientsInnerContainer')	{
