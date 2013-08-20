@@ -7,7 +7,7 @@
 $username = "realtimereport";
 $password = "COzf7^W2Scz";
 
-$embed = mysql_connect("reporting.read-only.db.embed.jungroup.com",$username,$password);
+$embed = mysql_connect("applications.read-only.db.embed.jungroup.com",$username,$password);
 
 # Assign the embed database
 $database = "embed";
