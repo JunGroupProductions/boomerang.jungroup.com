@@ -1,0 +1,172 @@
+body {
+	background: black;
+	margin: 0px;
+	font-family: Andale Mono, Courier, sans-serif;
+	color: #13ff00;
+}
+
+#header {
+	background-color: black;
+}
+
+#logoimg {
+	width: 300px;
+	margin: 0 5% 0 0;
+	float: right;
+}
+
+div.header-left {
+	float: left;
+}
+
+h1 {
+	margin: 19px 10px 10px 73px;
+	font-size: 40px;
+	font-family: Courier, sans-serif;
+}
+
+h2 {
+	width: 77%;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: right;
+	font-size: 35px;
+}
+
+table {
+	vertical-align: middle;
+	border: none;
+	border-collapse: collapse;
+	border: 1px dashed #13ff00;
+}
+
+table td {
+	border-left: 1px dashed #13ff00;
+	padding: 10px 48px;
+	font-size: 13px;
+}
+
+table td:first-child { 
+	border-left: none;
+}
+
+th {
+	background: #043100;
+	font-size: 15px;
+	padding: 10px 50px;
+	border: 1px dashed #13ff00;
+	text-align: center;
+}
+
+td {
+	text-align: center;
+}
+
+div.connect-error {
+	width: 55%;
+	margin: 7% 5% 5% 8%;
+	border: 4px dashed #13ff00;
+	padding: 10px 15px 10px 20px;
+}
+
+div.error {
+	width: 75%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 10px;
+	padding: 15px 10px 15px 30px;
+	border: 8px dotted #13ff00;
+}
+
+div.error p {
+	text-align: center;
+}
+
+div.welcome {
+	width: 75%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 10px;
+	padding: 15px 10px 15px 30px;
+	border: 8px dotted #13ff00;
+}
+
+div.welcome p {
+	text-align: center;
+}
+
+div.campaign_container {
+	width: 75%;
+	overflow: hidden;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 10px;
+	padding: 30px 30px 15px 30px;
+	border: 2px dotted #13ff00;
+}
+
+div.campaign_info {
+	font-size: 18px;
+}
+
+div.offer_container {
+	margin-left: auto;
+	margin-right: auto;
+	width: 95%;
+}
+
+div.date_table {
+	width: 453px;
+	float: left;
+	margin-bottom: 15px;
+}
+
+div.offer_details {
+	width: auto;
+	float: left;
+	margin: 0 0 15px 0;
+	padding: 10px 10px 0 10px;
+	border: 1px dashed #13ff00;
+
+}
+
+div.offer_details p {
+	margin-top: 0;
+}
+
+div.clear {
+	clear: both;
+}
+
+div.empty_offer {
+	border: 1px dashed #13ff00;
+	padding: 5px 3px 5px 9px;
+}
+
+div.empty_offer p {
+	margin: 0 0 0 10px;
+	font-size: 13px;
+}
+
+hr {
+	display: block; height: 1px;
+    border: 0; border-top: 1px solid #13ff00;
+    margin: 21px 0 10px 0; 
+    padding: 0;
+}
+
+p.offer_name {
+	font-size: 16px;
+}
+
+a:link {
+	color: #13ff00;
+}
+
+a:visited {
+	color: #0cad00;
+}
+
+a:hover {
+	color: #0ecc00;
+}
