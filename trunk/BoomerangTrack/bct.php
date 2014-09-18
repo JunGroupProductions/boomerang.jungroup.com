@@ -17,7 +17,7 @@
 $username = "realtimereport";
 $password = "COzf7^W2Scz";
 $database = "embed";
-$embed = mysqli_connect("applications.read-only.db.embed.jungroup.com",$username,$password,$embed) or die('Could not connect: ' . mysqli_connect_error());
+$embed = mysqli_connect("applications.read-only.db.embed.jungroup.com",$username,$password,$database) or die('Could not connect: ' . mysqli_connect_error());
 
 //set dates
 date_default_timezone_set('UTC');
@@ -59,12 +59,12 @@ foreach ($partner_array as $partner_row) {
 		
 		//campaign array
 		while($active_campaigns_array = mysqli_fetch_array($active_campaigns)){			
-		$campaign_data[] = [
+		$campaign_data[] = array(
 				"campaign_name" => $active_campaigns_array['campaign_name'],
 				"campaign_id" => $active_campaigns_array['campaign_id'],
 				"flight_start" => $active_campaigns_array['start_date'],
 				"flight_end" => $active_campaigns_array['end_date']
-			];
+			);
 		}
 
 		//2. Select active offers for each campaign
@@ -90,11 +90,11 @@ foreach ($partner_array as $partner_row) {
 
 			//offer array
 			while($active_offers_rows = mysqli_fetch_array($active_offers)){			
-				$offer_data[] = [
+				$offer_data[] = array(
 					"offer_id" => $active_offers_rows['offer_id'],
 					"offer_name" => $active_offers_rows['offer_name'],
-					"max_views" => $active_offers_rows['max_views']
-				];
+					"max_views" => $active_offers_rows['max_views'],
+				);
 			}
 
 			//3. Select page views by day by url for each offer
@@ -153,11 +153,11 @@ function filterQuery($query_input, $param) {
 	mysqli_data_seek($query_input, 0);
 
 	while($query_results = mysqli_fetch_array($query_input)){			
-		$query_data[] = [
+		$query_data[] = array(
 			"date" => $query_results['date'],
 			"page_views" => $query_results['page_views'],
 			"url" => $query_results['url']
-		];
+		);
 	}
 
 	//unzip results
@@ -195,10 +195,10 @@ function filterQuery($query_input, $param) {
 	//zip up arrays
 	if ((count($var_results)) == (count($pv_results))) {
 		if ($param == 'date') {
-			$var_output = array_map(function ($var_results, $pv_results, $param) {$output = ['date' => $var_results, 'page_views' => $pv_results]; return $output;}, $var_results, $pv_results);
+			$var_output = array_map(function ($var_results, $pv_results) {$output = array('date' => $var_results, 'page_views' => $pv_results); return $output;}, $var_results, $pv_results);
 		}
 		else {
-			$var_output = array_map(function ($var_results, $pv_results, $param) {$output = ['url' => $var_results, 'page_views' => $pv_results]; return $output;}, $var_results, $pv_results);
+			$var_output = array_map(function ($var_results, $pv_results) {$output = array('url' => $var_results, 'page_views' => $pv_results); return $output;}, $var_results, $pv_results);
 		}
 	}
 	else {
@@ -286,6 +286,14 @@ function getbgc($trcount) {
 	$odd=$trcount%2;
 	if($odd==1){return $blue;}
     else{return $green;}    
+}
+
+function array_column($array, $column){
+    $a2 = array();
+    array_map(function ($a1) use ($column, &$a2){
+        array_push($a2, $a1[$column]);
+    }, $array);
+    return $a2;
 }
 
 ?>
