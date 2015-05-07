@@ -47,7 +47,7 @@ foreach ($partner_array as $partner_row) {
 	$campaign_data = array();
 
 	//query to select active campaigns
-	$campaign_query = "select id as campaign_id, name as campaign_name, date(flight_start) as start_date, date(flight_end) as end_date, active from embed.campaigns where name like '".$partner_row."%' and active = 1 and date(flight_end) >= date(now()) -2";
+	$campaign_query = "select id as campaign_id, name as campaign_name, date(flight_start) as start_date, date(flight_end) as end_date, active from embed.campaigns where name like '".$partner_row."%' and active = 1";
 	$active_campaigns = mysqli_query($embed, $campaign_query);
 	$num_cam = mysqli_num_rows($active_campaigns);
 
