@@ -7,8 +7,8 @@ $output = fopen("php://output",'w') or die("Can't open php://output");
 header("Content-Type:application/csv"); 
 header("Content-Disposition:attachment;filename=".$filename); 		    
 fputcsv($output, array('DATE','URL','PAGE VIEWS'));
-foreach($_SESSION["tr_day"] as $product) {
-    fputcsv($output, $product);
+foreach($_SESSION["tr_day"] as $row) {
+    fputcsv($output, $row);
 }
 fclose($output) or die("Can't close php://output");
 ############## INSECURE ####################
