@@ -14,7 +14,7 @@ $password = "COzf7^W2Scz";
 # Assign the embed database
 $database = "embed";
 
-$embed = mysql_connect("127.0.0.1",$username,$password);
+$embed = mysql_connect("reporting.read-only.db.embed.jungroup.com",$username,$password);
 
 # Check to make sure we can connect to the "embed" db
 mysql_select_db($database) or die("Unable to select embed database");
