@@ -164,7 +164,7 @@ function array_column_function($array, $column){
 			                      
 			// echo "<br><b>Data last updated at ". $last_updated_time[0] . " Eastern Time </b><br>";
 
-			echo "<br><i style='color:#9E1108;'>We are currently under maintenance and you may observe a lag in the numbers below.</i></br>";
+			echo "<br><i style='color:#9E1108;'>Our system is currently under maintenance and you may observe a lag in the numbers below.</i></br>";
 
 
 
