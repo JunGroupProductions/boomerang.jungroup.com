@@ -162,11 +162,7 @@ function array_column_function($array, $column){
 			$last_updated_query = mysql_query ('select convert_tz(max(wtps.updated_at),"UTC","US/Eastern") from web_traffic_performance_summary wtps ');
 			$last_updated_time = mysql_fetch_array($last_updated_query);
 			                      
-			// echo "<br><b>Data last updated at ". $last_updated_time[0] . " Eastern Time </b><br>";
-
-			echo "<br><i style='color:#9E1108;'>Our system is currently under maintenance and you may observe a lag in the numbers below.</i></br>";
-
-
+			echo "<br><b>Data last updated at ". $last_updated_time[0] . " Eastern Time </b><br>";
 
 			############# export to csv #############
 			echo '<a href="csv.php?num=1" class="button" style="float:right;"> Export to CSV </a>';
